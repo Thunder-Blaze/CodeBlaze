@@ -14,9 +14,11 @@ int main(){
     printf("The value of a is %f\n",*((float*)ptr)); //works
 
     float d=3.7;
-    printf("Rounded value of d is %.f",d);
+    printf("Rounded value of d is %.f\n",d);
+    int e=3.7;
+    printf("Truncated value of e is %d\n",e);
 
-    // https://youtu.be/aZb0iu4uGwA?t=6187
+    // https://youtu.be/aZb0iu4uGwA?t=11838
     // https://www.youtube.com/watch?v=YyJRXPY0Vyg
     // https://www.youtube.com/watch?v=dHlDAhARLxo
     // Video 53
