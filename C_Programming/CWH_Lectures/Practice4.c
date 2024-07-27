@@ -70,6 +70,12 @@ int main(){
     //     i++;
     // };
 
+// Methord - 2
+    // int num;
+    // printf("Type the value of n - ");
+    // scanf("%d",&num);
+    // printf("The sum of n Natural numbers is %d",((num*(num+1))/2));
+
 
 
 
@@ -79,14 +85,95 @@ int main(){
 
 
 // Q6. Write a program to implement Q5 using for and do-while loop
+    // No thanks
+
+
+
+
+
+
+
+
+
 // Q7. Write a program to calculate the sum of the numbers occuring
 //     in the multiplpication table of 8
+    // int sum = 0;
+    // for (int i = 1; i < 11; i++)
+    // {
+    //     sum = sum + (8*i);
+    // };
+    // printf("%d",sum);
+    
+
+
+
+
+
+
+
+
+
+
 // Q8. Write a program to calculate the factorial of a given number
 //     using a for loop
+    // int num;
+    // printf("Type the Value of Num - ");
+    // scanf("%d",&num);
+    // int fact = 1;
+    // for (int i = num ; i-1 ; i--){
+    //     fact=fact*i;
+    // };
+    // printf("The Factorial of %d is %d",num,fact);
+    
+
+
+
+
+
+
+
+
 // Q9. Repeat Q8 using while loop
+    // No thanks
+
+
+
+
+
+
+
+
+
 // Q10. Write a program to check whether a given number is prime or
 //      using loops
-// Q11. Repeat Q11 using other types of loops
+    // int num;
+    // printf("Type a Number - ");
+    // scanf("%d",&num);
+    // int prime=1;
+    // for (int i = num; i ; i--)
+    // {
+    //     if (num%i==0 && i!=1 && i!=num){
+    //         prime = 0;
+    //         break;
+    //     }
+    // };
+    // if (num!=1){
+    //     if (prime==1) {
+    //         printf("Number is Prime");
+    //     } else if (prime==0) {
+    //         printf("Number is Composite");
+    //     }
+    // } else {
+    //     printf("Number is neither Prime nor Composite");
+    // }
+
+    
+
+
+// Q11. Repeat Q10 using other types of loops
+    // No thanks
+
+
     
     
 
