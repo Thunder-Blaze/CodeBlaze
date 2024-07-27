@@ -9,4 +9,6 @@ int main()
     printf("a * b = %d \n",a*b);
     printf("a / b = %d \n",a/b);
     printf("a %% b = %d \n",a%b);
+    printf("a++ = %d\n",a++);  // Prints first and then Increments (Post Increment Operator)
+    printf("++a = %d\n",++a);  // Increments first and then Prints (Pre Increment Operator)
 }
