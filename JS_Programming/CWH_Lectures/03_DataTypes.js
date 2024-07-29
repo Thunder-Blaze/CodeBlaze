@@ -11,6 +11,10 @@ let g = undefined;                  // undefined
 
 // console.log(a, b, c, d, e, f, g);
 // console.log(typeof f);
+console.log(false+" hello");        // falsehello (concatenates)
+console.log(true+23);               // 24 (Interprets true as 1 and false as 0)
+console.log("10"-10);               // 0 (Interprets "10" as 10)
+console.log("x10"-10);              // NaN (Not a Number)
 
 
 // Non Primitive Data Type
