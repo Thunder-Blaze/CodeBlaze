@@ -58,6 +58,7 @@
 //         amt+=a;
 //     }
 // }
+// amt = Number.parseInt(amt);
 // console.log("The Amount is",amt);
 //
 // Methord 2 (Slicing) [Works only for a specific String]
