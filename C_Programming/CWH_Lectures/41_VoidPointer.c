@@ -19,6 +19,7 @@ int main(){
     printf("Truncated value of e is %d\n",e);
 
     // https://youtu.be/aZb0iu4uGwA?t=27176
+    // https://youtu.be/aZb0iu4uGwA?t=29599
     // https://www.youtube.com/watch?v=YyJRXPY0Vyg
     // https://www.youtube.com/watch?v=dHlDAhARLxo
     // Video 53
