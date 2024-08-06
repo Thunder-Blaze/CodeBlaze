@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mozilla DrumBeat</title>
+        <style>
+            body {
+                /* background: #EEE1C7; */
+                background: linear-gradient(45deg, #B24592, #F15F79);
+                font-family: sans-serif;
+                padding: 0;
+                line-height: 1.8;
+                /* margin-left: 200px;
+                margin-right: 200px;
+                margin-top: 40px;
+                margin-bottom: 40px; */
+                margin: 40px;
+                display: flex;
+            }
+            u {
+                font-size: 20px;
+                color: #CE5187;
+            }
+            body .container {
+                position: relative;
+                background: #FFFFFF;
+                width: calc(100% - 300px);
+                height: calc(100vh - 130px);
+                overflow: scroll;
+                padding: 40px;
+                padding-bottom: 10px;
+                border-radius: 20px;
+                scrollbar-width: none;
+                /* border-bottom: 10px solid #664016; */
+            }
+            body h1, body h2, body a {
+                /* font-family: serif; */
+                color: #CE5187;
+            }
+            body .container .about {
+                display: flex;
+                gap: 30px;
+            }
+            body .container .about .logo {
+                display: block;
+                width: 300px;
+                margin: auto;
+            }
+            body .container .sign-up {
+                align-items: center;
+                text-align: center;
+                justify-content: center;
+                display: grid;
+                /* flex-direction: column; */
+                grid-template-columns: 40% 40%; 
+                grid-template-rows: 1fr 1fr 1fr 1fr; 
+                font-size: 18px;
+                background: linear-gradient(45deg, #B2459243, #F15F7943);
+                /* background: #000; */
+                height: calc(100% - 30px);
+                border-radius: 16px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+                & h2 {
+                    font-size: 30px;
+                    grid-column: span 2;
+                    grid-row: span 1;
+                }
+            }
+            body .container .sign-up > div {
+                position: relative;
+                height: 100%;
+                width: 100%;
+                grid-row: span 3;
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            body .container .sign-up label {
+                font-weight: bold;
+            }
+            body .container .sign-up > div > div {
+                position: relative;
+                padding: 10px;
+            }
+            body .container .sign-up > div > div > label[for="name"], body .container .sign-up > div > div > label[for="email"] {
+                position: absolute;
+                left: 10px;
+                top: -20px;
+            }
+            body .container .sign-up input {
+                padding: 8px;
+                font-size: 20px;
+                border-radius: 8px;
+                border: none !important;
+                outline: none !important;
+                background: linear-gradient(45deg, #B24592, #F15F79);
+                color: #FFFD;
+            }
+            body .container .sign-up input[type="button"] {
+                font-size: 16px;
+            }
+            body .container .sign-up > div > div label[for="user-gender-male"], body .container .sign-up > div > div label[for="user-gender-female"] {
+                font-weight: normal;
+            }
+            body .container .sign-up .gender {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                text-align: left;
+            }
+            body .container .schedule table{
+                text-align: center;
+            }
+            body .sidebar {
+                width: 300px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                /* background-color: #EEE1C7; */
+                color: #FFFFFF;
+                opacity: 0.8;
+                /* position: absolute; */
+                /* right: 20px; */
+                padding: 20px;
+                /* margin-top: -50%; */
+                /* top: 50%; */
+                & h2 {
+                    color: #FFFFFF;
+                }
+                & a {
+                    text-decoration: none;
+                    padding: 3px 6px;
+                    border-radius: 5px;
+                    background: #FFFD;
+                    color: #CE5187;
+                }
+                & a:hover {
+                    color: #222;
+                }
+            }
+            body .container .bottom-links {
+                width: 100%;
+                text-align: center;
+            }
+            /* body .bg-pattern{
+                color: #D08256;
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                font-size: 16px;
+                font-family: sans-serif;
+                z-index: -1;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="sidebar">
+            <h2>Projects</h2>
+            <ul>
+                <li>
+                    Featured
+                    <ul>
+                        <li><a href="#">School of WebCraft</a></li>
+                        <li><a href="#">Crisis Commons</a></li>
+                    </ul>
+                </li>
+                <li>
+                    Latest
+                    <ul>
+                        <li><a href="#">JessyInk</a></li>
+                        <li><a href="#">PrivacyCamp</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="about">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzXQe4dJc3TMjFuyoaZIrTFV8nYqK1AUEp0Q&s" alt="Mozilla DrumBeat Logo" class="logo">
+                <div>
+                    <h1>About</h1>
+                    <p>
+                        Drumbeat is an initiative that wants to keep the web <u><b>open</b></u> and do it through <i><u>practical projects and local events</u></i> that gather smart, creative people around big ideas, solving problems and building the <u><b>open web</b></u>
+                    </p>
+                </div>
+            </div>
+            <div class="schedule">
+                <h2>Festival Schedule</h2>
+                <table border="=">
+                    <tr>
+                        <th>Time</th>
+                        <th>Topic</th>
+                    </tr>
+                    <tr>
+                        <td>18:00-20:00</td>
+                        <td>Registration</td>
+                    </tr>
+                    <tr>
+                        <td>20:30-23:00</td>
+                        <td>Keynote</td>
+                    </tr>
+                </table>
+            </div>
+            <form class="sign-up">
+                <h2>Sign Up !</h2>
+                <div>
+                    <div>
+                        <label for="name">Name : </label>
+                        <input type="text" name="name" id="user-name">
+                    </div>
+                    <div>
+                        <label for="email">Email : </label>
+                        <input type="email" name="email" id="user-email">
+                    </div>
+                    <input type="button" value="Sign Up">
+                </div>
+                <div>    
+                    <div>
+                        <label for="location">Location : </label>
+                        <select name="location" id="user-location">
+                            <option value="sydney">Sydney</option>
+                            <option value="japan">Japan</option>
+                            <option value="america">America</option>
+                            <option value="india">India</option>
+                        </select>
+                    </div>
+                    <div class="gender">
+                        <label for="gender">Gender : </label>
+                        <div>
+                            <input type="radio" name="gender" id="user-gender-male">
+                            <label for="user-gender-male">Male</label>
+                            <br>
+                            <input type="radio" name="gender" id="user-gender-female">
+                            <label for="user-gender-female">Female</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="experience">Experience : </label>
+                        <br>
+                        <textarea name="experience" id="user-experience"></textarea>
+                    </div>
+                </div>
+            </form>
+            <div class="bottom-links">
+                <b><a href="https://twitter.com">Twitter</a></b> |
+                <b><a href="https://facebook.com">Facebook</a></b> |
+                <a href="https://flickr.com">Flickr</a>
+            </div>
+        </div>
+        <!-- <div class="bg-pattern">
+            01001010 10011110 10111110 01100001 11011110 00010111 11011100 01010010 01110000 10001101 11100000 00101011 01010010 11111010 00000010 10100000 11110101 00000011 01001010 10011110 10111110 01100001 11011110 00010111 11011100 01010010 01110000 10001101 11100000 00101011 01010010 11111010 00000010 10100000 11110101 00000011 01001010 10011110 10111110 01100001 11011110 00010111 11011100 01010010 01110000 10001101 11100000 00101011 01010010 11111010 00000010 10100000 11110101 00000011
+        </div> -->
+    </body>
+</html>
