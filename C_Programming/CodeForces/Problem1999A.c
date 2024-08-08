@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-
+ 
 int main(){
     int t = 0;
     scanf("%d",&t);
@@ -10,35 +10,14 @@ int main(){
         for (int i = 0; i < t; i++)
         {
             int num;
+            scanf("%d",&num);
             int sum=0;
-            int* a = (int*) calloc(2,sizeof(int));
-            int* b = (int*) calloc(2,sizeof(int));
-            scanf("%d %d %d %d",&a[0],&a[1],&b[0],&b[1]);
-            if (a[0]>b[0] && a[1]>b[0] && a[0]>b[1] && a[1]>b[1])
+            while (num)
             {
-                sum = 4;
-            }
-            else if (a[0]<b[0] && a[1]<b[0] && a[0]<b[1] && a[1]<b[1])
-            {
-                sum = 0;
-            }
-            else if (a[0]<b[0] && a[1]>b[0] && a[0]<b[1] && a[1]>b[1])
-            {
-                sum = 0;
-            }
-            else if (a[0]>b[0] && a[1]<b[0] && a[0]>b[1] && a[1]<b[1])
-            {
-                sum = 0;
-            } 
-            else if (a[0]==b[0] && a[1]==b[0] && a[0]==b[1] && a[1]==b[1])
-            {
-                sum = 0;
-            } else {
-                sum = 2;
+                sum+=(num%10);
+                num/=10;
             }
             output[i]=sum;
-            free(a);
-            free(b);
         }
         for (int i = 0; i < t; i++)
         {

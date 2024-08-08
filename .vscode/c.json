@@ -1,0 +1,70 @@
+// C UserSnippets Backup
+{
+	// Place your snippets for c here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"CodeForces Boilerplate": {
+		"prefix": "codeforces",
+		"body": [
+			"#include <stdio.h>",
+			"#include <stdlib.h>",
+			"",
+			"int main(){",
+			"    int test_cases = 0;",
+			"    scanf(\"%d\",&test_cases);",
+			"    if (test_cases>=1 && test_cases<=1000)",
+			"    {",
+			"        int* output = (int*) calloc(test_cases,sizeof(int));",
+			"        for (int t = 0; t < test_cases; t++)",
+			"        {",
+			"            $0",
+			"",
+			"        }",
+			"        for (int t = 0; t < test_cases; t++)",
+			"        {",
+			"            printf(\"%d\\n\",output[t]);",
+			"        }",
+			"        free(output);",
+			"    } else {",
+			"        printf(\"Test Cases should be between 1 to 1000\\n\");",
+			"    }",
+			"",
+			"    return 0;",
+			"}"
+		],
+		"description": "A Boilerplate for CodeForces Problems"
+	},
+
+
+
+	"C Boilerplate": {
+		"prefix": "c",
+		"body": [
+			"#include <stdio.h>",
+			"#include <stdlib.h>",
+			"#include <string.h>",
+			"#include <math.h>",
+			"",
+			"int main(){",
+			"    $0",
+			"    return 0;",
+			"}"
+		],
+		"description": "A Boilerplate for C"
+	}
+}
