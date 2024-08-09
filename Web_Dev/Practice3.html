@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAMS</title>
+    <style>
+        body {
+            background: #1D1730;
+            font-family: sans-serif;
+            padding: 0;
+            margin: 0;
+            color: #FFF;
+        }
+        #navbar {
+            background: #292244;
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75em 6em;
+            width: calc(100% - 12em);
+        }
+        #navbar .logo {
+            font-weight: 800;
+            letter-spacing: 0.2rem;
+            font-size: 1.5rem;
+        }
+        .navbar .nav-wrap .nav-links {
+            padding: 0 1em;
+            text-decoration: none;
+            color: aliceblue;
+            transition: all 0.3s ease-in-out;
+        }
+        .navbar .nav-wrap .nav-links:hover {
+            color: #FD5258;
+        }
+        .navbar .hire-me {
+            text-decoration: none;
+            padding: 0.75em 1.5em;
+            background: #FD5258;
+            color: aliceblue;
+            border-radius: 6px;
+        }
+        main .container {
+            /* margin-top: 35vh; */
+            position: absolute;
+            left: 5em;
+            bottom: 5em;
+        }
+        main .main-img-cont{
+            position: absolute;
+            height: 80vh;
+            right: 1em;
+            bottom: 0;
+            overflow: hidden;
+        }
+        main .main-img-cont .main-img{
+            height: 80vh;
+        }
+        main .main-img-cont::after {
+            content: "";
+            position: absolute;
+            background: #FD5258;
+            border-radius: 50%;
+            height: 25em;
+            width: 25em;
+            z-index: -1;
+            top: calc(50% - 12.5em);
+            left: calc(50% - 12.5em);
+        }
+        main .main-img-cont::before {
+            content: "";
+            position: absolute;
+            background: #FD525833;
+            border-radius: 50%;
+            height: 20em;
+            width: 25em;
+            z-index: -1;
+            top: calc(50% - 12.5em);
+            left: 0;
+        }
+        main .container h3 {
+            font-family: serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            position: relative;
+        }
+        main .container h1 {
+            position: relative;
+            font-family: serif;
+            font-size: 6.75rem;
+            margin: 0;
+            font-weight: 400;
+        }
+        main .container h1::after{
+            content: "";
+            position: absolute;
+            background: #FFF;
+            width: 2px;
+            height: 100%;
+            right: -0.2em;
+        }
+        main .container .btncontainer {
+            padding: 3em 1em 0 0;
+            /* display: flex; */
+            gap: 1em;
+        }
+        main .container .btncontainer .bodybtn{
+            text-decoration: none;
+            padding: 1.25em 1.5em;
+            margin-right: 1em;
+            color: aliceblue;
+            border-radius: 6px;
+        }
+        main .container .btncontainer .bodybtn.btnred{
+            background: #FD5258;
+        }
+        main .container .btncontainer .bodybtn.btnblue{
+            background: #292244;
+            padding: 1.25em 3.5em;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar" class="navbar">
+        <div class="logo">RAMS</div>
+        <div class="nav-wrap">
+            <a href="#" class="nav-links">Home</a>
+            <a href="#" class="nav-links">About</a>
+            <a href="#" class="nav-links">Services</a>
+            <a href="#" class="nav-links">Projects</a>
+            <a href="#" class="nav-links">Blog</a>
+            <a href="#" class="nav-links">Contact</a>
+        </div>
+        <a href="#" class="hire-me">Hire Me</a>
+    </nav>
+    <main>
+        <div class="main-img-cont">
+            <img class="main-img" src="https://files.catbox.moe/0h9iab.png" alt="My_Image">
+        </div>
+        <div class="container">
+            <h3>Hello World! I am</h3>
+            <h1>Developer</h1>
+            <p>Senior Product Designer Based on New York City</p>
+            <div class="btncontainer">
+                <a href="#" class="bodybtn btnred">Download Resume</a>
+                <a href="#" class="bodybtn btnblue">Contact Me</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
