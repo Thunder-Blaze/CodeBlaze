@@ -25,6 +25,7 @@ int main(){
     FILE *fptr = fopen("67_Text.txt","r");
     char org[162];
     fscanf(fptr,"%[^\n]%*c",org);
+    fclose(fptr);
 
     // char org[] = "Thanks {{name}} for purchasing {{item}} from our outlet {{outlet}}. Please Visit our outlet {{outlet}} for any kind of problems. We Plan to serve you again soon.";
 
