@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        html {
+            scrollbar-width: none;
+        }
+        body {
+            background: #010001;
+            color: #c5c5c5;
+            margin: 0;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: 0.02rem;
+            word-spacing: 0.1rem;
+        }
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: sticky;
+            justify-content: space-between;
+            background-color: #010001;
+            padding: 0 1.25em 0 1.25em;
+            height: 4.2em;
+            z-index: 1000;
+        }
+        #navbar .nav-wrap {
+            display: flex;
+            height: calc(100% - 2.5em);
+            padding: 1.25em;
+            align-items: center;
+        }
+        #navbar .nav-wrap .logo{
+            height: 100%;
+            margin-right: 3em;
+        }
+        #navbar .nav-wrap .nav-links{
+            padding: 1em;
+            font-size: 0.95rem;
+            text-decoration: none;
+            color: #e5e5e5;
+            transition: all 0.5s ease;
+        }
+        #navbar .nav-wrap .nav-links:hover{
+            color: #b3b3bb;
+        }
+        #navbar .search .search-icon > img {
+            height: 1.5rem;
+            text-align: center;
+            display: block;
+            filter: invert(1);
+        }
+        #content .previews {
+            height: 24rem;
+            position: relative;
+        }
+        #content .previews .preview-bg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            transition: all 0.4s ease;
+            background: linear-gradient(#01000130,#010001AF,#010001FF), url(https://animeonlinesub.com/wp-content/uploads/2024/06/Blue-Lock-prepara-su-regreso-con-un-avance-%E2%80%94-Noticias.jpg);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: -1;
+        }
+        #content .previews .preview-data{
+            position: absolute;
+            bottom: 2.5em;
+            left: 2.5em;
+            width: 31em;
+        }
+        #content .previews .preview-data .preview-title {
+            margin-bottom: 0.2em;
+            font-size: 4rem;
+            width: 50rem;
+            font-weight: 800;
+            color: #FFF;
+            text-transform: uppercase;
+            transition: all 0.3s ease;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        #content .previews .preview-data .preview-description {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        #content .previews .preview-data .buttons {
+            margin-top: 1.25em;
+            display: flex;
+        }
+        #content .previews .preview-data .buttons > a{
+            text-decoration: none;
+            padding: 0.75em 1em 0.75em 2.5em;
+            position: relative;
+            margin-right: 1.5em;
+            background: aliceblue;
+            color: #010001;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        #content .previews .preview-data .buttons .play-now:after {
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24" role="img" data-icon="PlayStandard" aria-hidden="true"><path d="M5 2.69127C5 1.93067 5.81547 1.44851 6.48192 1.81506L23.4069 11.1238C24.0977 11.5037 24.0977 12.4963 23.4069 12.8762L6.48192 22.1849C5.81546 22.5515 5 22.0693 5 21.3087V2.69127Z" fill="currentColor"></path></svg>');
+            height: 1em;
+            width: 1em;
+            position: absolute;
+            top: 0.5em;
+            left: 0.3em;
+        }
+        #content .previews .preview-data .buttons .more-info:after {
+            /* content: ''; */
+            content: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" width="24" height="24" viewBox="0 0 24 24" role="img" data-icon="CircleIStandard" aria-hidden="true"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2ZM0 12C0 5.37258 5.37258 0 12 0C18.6274 0 24 5.37258 24 12C24 18.6274 18.6274 24 12 24C5.37258 24 0 18.6274 0 12ZM13 10V18H11V10H13ZM12 8.5C12.8284 8.5 13.5 7.82843 13.5 7C13.5 6.17157 12.8284 5.5 12 5.5C11.1716 5.5 10.5 6.17157 10.5 7C10.5 7.82843 11.1716 8.5 12 8.5Z" fill="%23FFF"></path></svg>');
+            height: 1em;
+            width: 1em;
+            position: absolute;
+            top: 0.5em;
+            left: 0.5em;
+        }
+        #content .previews .preview-data .buttons .more-info {
+            background: #6d6d6e9d;
+            color: aliceblue;
+        }
+        #content .previews .preview-data .buttons > a:hover {
+            opacity: 0.6;
+        }
+        #content .popular-shows {
+            width: calc(100% - 2em);
+            padding: 1em;
+        }
+        #content .popular-shows .shows{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            /* justify-content: center; */
+            gap: 1em;
+        }
+        #content .popular-shows .shows > a {
+            all: unset;
+            width: 9rem;
+            height: 12rem;
+            width: calc((100vw - 7em) / 7);
+            height: calc((100vw - 7em) / 21 * 4);
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+        }
+        #content .popular-shows .shows.dimmed > a {
+            opacity: 0.4;
+        }
+        #content .popular-shows .shows > a:hover {
+            transform: scale(1.05);
+            outline: 3px solid;
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-wrap">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" alt="" class="logo">
+            <a href="#" class="nav-links">TV Shows</a>
+            <a href="#" class="nav-links">Movies</a>
+            <a href="#" class="nav-links">Recently Added</a>
+            <a href="#" class="nav-links">My List</a>
+        </div>
+        <div class="search">
+            <div class="search-form">
+
+            </div>
+            <div class="search-icon">
+                <img src="https://www.iconpacks.net/icons/2/free-search-icon-2907-thumb.png" alt="Search-Icon">
+                <!-- <svg id="tnb-google-search-icon" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.8153 10.3439C12.6061 9.2673 13.0732 7.9382 13.0732 6.5C13.0732 2.91015 10.163 0 6.57318 0C2.98333 0 0.0731812 2.91015 0.0731812 6.5C0.0731812 10.0899 2.98333 13 6.57318 13C8.01176 13 9.3412 12.5327 10.4179 11.7415L10.4171 11.7422C10.4466 11.7822 10.4794 11.8204 10.5156 11.8566L14.3661 15.7071C14.7566 16.0976 15.3898 16.0976 15.7803 15.7071C16.1708 15.3166 16.1708 14.6834 15.7803 14.2929L11.9298 10.4424C11.8936 10.4062 11.8553 10.3734 11.8153 10.3439ZM12.0732 6.5C12.0732 9.53757 9.61075 12 6.57318 12C3.53561 12 1.07318 9.53757 1.07318 6.5C1.07318 3.46243 3.53561 1 6.57318 1C9.61075 1 12.0732 3.46243 12.0732 6.5Z" fill="black"></path>
+                </svg> -->
+            </div>
+        </div>
+    </nav>
+    <main class="content" id="content">
+        <div class="previews">
+            <div class="preview-bg"></div>
+            <div class="preview-data">
+                <div class="preview-title">Blue Lock</div>
+                <div class="preview-description">After a disastrous defeat at the 2018 World Cup, Japan's team struggles to regroup. But what's missing? An absolute Ace Striker, who can guide them to the win.</div>
+                <div class="buttons">
+                    <a href="https://animepahe.ru/a/4925" class="play-now" target="_blank">Play Now</a>
+                    <a href="https://anilist.co/anime/163146" class="more-info" target="_blank">More Info</a>
+                </div>
+            </div>
+        </div>
+        <div class="popular-shows">
+            <h3>Popular on Netflix</h3>
+            <div class="shows">
+                <a href="https://anilist.co/anime/163146" onmouseover="updateInfo(this)" onmouseout="toggleShowOpacity()" target="_blank" style="background-image: url(https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx163146-kN1Fn6XE31vJ.jpg);" data-alt="Blue Lock" data-bnr="https://animeonlinesub.com/wp-content/uploads/2024/06/Blue-Lock-prepara-su-regreso-con-un-avance-%E2%80%94-Noticias.jpg" data-play="https://animepahe.ru/a/4925"></a>
+                <a href="https://anilist.co/anime/163134" onmouseover="updateInfo(this)" onmouseout="toggleShowOpacity()" target="_blank" style="background-image: url(https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx163134-e7ff17XOlj10.png);" data-alt="Re:Zero" data-bnr="https://s4.anilist.co/file/anilistcdn/media/anime/banner/163134-CqaXjXVivwJ5.jpg" data-play="https://animepahe.ru/a/888"></a>
+                <a href="https://anilist.co/anime/16498" onmouseover="updateInfo(this)" onmouseout="toggleShowOpacity()" target="_blank" style="background-image: url(https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx16498-73IhOXpJZiMF.jpg);" data-alt="Attack On Titan" data-bnr="https://s4.anilist.co/file/anilistcdn/media/anime/banner/16498-8jpFCOcDmneX.jpg" data-play="https://animepahe.ru/a/49"></a>
+                <a href="https://anilist.co/anime/1535" onmouseover="updateInfo(this)" onmouseout="toggleShowOpacity()" target="_blank" style="background-image: url(https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx1535-4r88a1tsBEIz.jpg);" data-alt="Death Note" data-bnr="https://s4.anilist.co/file/anilistcdn/media/anime/banner/1535.jpg" data-play="https://animepahe.ru/a/672"></a>
+                <a href="https://anilist.co/anime/154587" onmouseover="updateInfo(this)" onmouseout="toggleShowOpacity()" target="_blank" style="background-image: url(https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx154587-gHSraOSa0nBG.jpg);" data-alt="Frieren" data-bnr="https://s4.anilist.co/file/anilistcdn/media/anime/banner/154587-ivXNJ23SM1xB.jpg" data-play="https://animepahe.ru/a/5319"></a>
+                <a href="https://anilist.co/anime/151807" onmouseover="updateInfo(this)" onmouseout="toggleShowOpacity()" target="_blank" style="background-image: url(https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx151807-yxY3olrjZH4k.png);" data-alt="Solo Leveling" data-bnr="https://s4.anilist.co/file/anilistcdn/media/anime/banner/151807-37yfQA3ym8PA.jpg" data-play="https://animepahe.ru/a/5421"></a>
+                <!-- <div onmouseover="updateInfo(this)" style="background-image: url(https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx161645-bX5S28Cc1Nnk.jpg);" alt="Apothecary Diaries"></div> -->
+                <a href="https://anilist.co/anime/163263" onmouseover="updateInfo(this)" onmouseout="toggleShowOpacity()" target="_blank" style="background-image: url(https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx163263-uz881pFAyi7P.jpg);" data-alt="Bungou Stray Dogs" data-bnr="https://s4.anilist.co/file/anilistcdn/media/anime/banner/103223-noS5nsDOI1Qu.jpg" data-play="https://animepahe.ru/a/331"></a>
+                <!-- <div onmouseover="updateInfo(this)" style="background-image: url(https://s4.anilist.co/file/anilistcdn/media/anime/cover/medium/bx21719-MSdTlkno0Z0u.jpg);" alt="Fate"></div> -->
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // let AniLink = "";
+        // let BnrLink = "";
+        let desc = "";
+        let descinitial = "After a disastrous defeat at the 2018 World Cup, Japan's team struggles to regroup. But what's missing? An absolute Ace Striker, who can guide them to the win.";
+        let title = document.querySelector("#content .previews .preview-data .preview-title");
+        let description = document.querySelector("#content .previews .preview-data .preview-description");
+        let bgbanner = document.querySelector("#content .previews .preview-bg");
+        let shows = document.querySelector("#content .popular-shows .shows");
+        let moreInfo = document.querySelector("#content .previews .preview-data .buttons .more-info");
+        let playNow = document.querySelector("#content .previews .preview-data .buttons .play-now");
+
+        function toggleShowOpacity(){
+            shows.classList.toggle("dimmed");
+        }
+        function updateInfo(x) {
+            if (x != document.querySelector("#content .popular-shows .shows > a[href=\"https://anilist.co/anime/163146\"]")) {
+                AniLink = x.href.replace("https://anilist.co/anime/", "");
+                fetchanimdata(AniLink);
+            } else {
+                description.innerText = descinitial;
+            }
+            title.innerText = x.getAttribute("data-alt");
+            // bgbanner.style.backgroundImage = "transparent";
+            bgbanner.style.backgroundImage = "linear-gradient(#01000130,#010001AF,#010001FF), url("+ x.getAttribute("data-bnr") +")";
+            moreInfo.href = x.href;
+            playNow.href = x.getAttribute("data-play");
+            // bgbanner.style.backgroundImage = ("linear-gradient(#01000170,#010001CF,#010001FF), "+ x.style.backgroundImage);
+            // console.log();
+            toggleShowOpacity();
+        }
+        async function fetchanimdata(animid){
+            let query = `
+            query ($animeid: Int) {
+                Media(id: $animeid) {
+                    bannerImage
+                    description
+                }
+            }
+            `;
+            let variables = {
+                animeid: animid
+            };
+            let url = 'https://graphql.anilist.co',
+                options = {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: query,
+                        variables: variables
+                    })
+                };
+
+            const response = await fetch(url, options);
+            let alanime = await response.json();
+            // console.log(alanime);
+            
+            // BnrLink = alanime.data.Media.bannerImage;
+            desc = alanime.data.Media.description;
+
+            description.innerText = desc.replace(/<[^>]*>/g, '');
+            
+            // if (BnrLink!=null) {
+            //     //     document.querySelector('.anime-cover').style.backgroundImage = "url(" + BnrLink + ")";
+            //     bgbanner.style.backgroundImage = "linear-gradient(#01000170,#010001CF,#010001FF), url("+ BnrLink +")";
+            // } else {
+            //     bgbanner.style.backgroundImage = "linear-gradient(#01000170,#010001CF,#010001FF), url(https://t3.ftcdn.net/jpg/05/91/97/64/360_F_591976463_KMZyV6obpsrN2bJJJkYW0bzoH2XxLTlA.jpg)";
+            // }
+            // console.log(BnrLink);
+        }
+    </script>
+</body>
+</html>

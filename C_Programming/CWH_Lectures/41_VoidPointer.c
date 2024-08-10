@@ -23,5 +23,8 @@ int main(){
     // https://www.youtube.com/watch?v=YyJRXPY0Vyg
     // https://www.youtube.com/watch?v=dHlDAhARLxo
     // Video 53
+    // https://www.youtube.com/watch?v=H8Lyj2D_cWo
+    // https://www.youtube.com/watch?v=gCFkkYZSxOc
+    // https://www.youtube.com/watch?v=-uleG_Vecis
     return 0;
 }
