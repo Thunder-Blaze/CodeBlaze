@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nothin</title>
+</head>
+<body>
+    <nav class="navbar"  id="navbar">
+        <div class="nav-elem1">Well</div>
+        <div class="nav-elem2">Navbar</div>
+    </nav>
+    <!-- Q2 Create a table element without tbody Now use "view page source" 
+            button to check whether it has tbody or not -->
+    <table>
+        <tr>
+            <th>A</th>
+            <th>B</th>
+            <th>C</th>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>9</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>24</td>
+            <td>55</td>
+        </tr>
+    </table>
+    <div id="elemx">
+        <div>Hello</div>
+        <div>I</div>
+        <div>AM</div>
+    </div>
+    <div>
+        <ul>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ul>
+        <ol>
+            <li>item1</li>
+            <li>item2</li>
+            <li>item3</li>
+        </ol>
+    </div>
+    <script>
+        // Q1 Create a navbar and change the color of its first element to red
+        document.getElementById("navbar").firstElementChild.style.color = "red";
+
+        // Q3 Create an element with 3 children, now change the color of first
+        //    and last element to green
+        document.getElementById("elemx").firstElementChild.style.color = "green";
+        document.getElementById("elemx").lastElementChild.style.color = "green";
+        
+        // Q4 Write a javascript code to change background of all <li> tags to
+        //    cyan
+        let a = document.getElementsByTagName("li");
+        for (let i=0; i < a.length; i++){
+            a[i].style.background = "cyan";
+            a[i].style.margin = "10px";
+        }
+
+        // M2
+        // Array.from(document.getElementsByTagName("li")).forEach((element) => {
+        //     element.style.background = "cyan";
+        // })
+
+        // Q5 Which of the following is used to look for the farthest ancestor that
+        //    matches a given  
+        //  (a) contain
+        //  (b) matches
+        //  (C) closest
+        //  (d) none of these
+        //
+        //  ans - none
+
+        </script>
+</body>
+</html>
