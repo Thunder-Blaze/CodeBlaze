@@ -1,0 +1,379 @@
+<!-- https://ryancv.bslthemes.com/#resume -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            transition: all 0.3s ease;
+        }
+
+        html {
+            scrollbar-width: none;
+        }
+
+        body {
+            color: #a2a2b3;
+            background: linear-gradient(45deg,#00B2FF,#B200FF) no-repeat center;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 500;
+            line-height: 1.4;
+            letter-spacing: 0.02rem;
+            word-spacing: 0.1rem;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            /* height: 100%; */
+            height: 100vh;
+            width: 100%;
+        }
+        .container {
+            margin: 2.5em;
+            width: 100%;
+            display: flex;
+        }
+        .container #navbar {
+            margin: 0;
+            padding: 1em;
+            width: fit-content;
+        }
+        .container #navbar .hamburger {
+            width: 2rem;
+            height: 2rem;
+            padding: 1rem;
+            background: white;
+            border-radius: 5px;
+            margin-bottom: 1em;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        .container #navbar .hamburger span {
+            width: 100%;
+            height: 3px;
+            border-radius: 2px;
+            background: #224;
+            margin-top: 0.2em;
+            margin-bottom: 0.2em;
+            transform: none;
+            transition: all 0.3s ease;
+        }
+        .container #navbar .hamburger .hamburger-line-1 {
+            width: 82%;
+        }
+        .container #navbar .hamburger .hamburger-line-3 {
+            width: 64%;
+        }
+        .container #navbar .hamburger:hover .hamburger-line-1 {
+            width: 100%;
+        }
+        .container #navbar .hamburger:hover .hamburger-line-3 {
+            width: 100%;
+        }
+        .container #navbar .hamburger.active .hamburger-line-1 {
+            width: 100%;
+            transform: translate(0px, 10px) rotate(45deg);
+        }
+        .container #navbar .hamburger.active .hamburger-line-2 {
+            width: 0;
+            opacity: 0;
+        }
+        .container #navbar .hamburger.active .hamburger-line-3 {
+            width: 100%;
+            transform: translate(0px, -10px) rotate(-45deg);
+        }
+        .container #navbar .nav-wrap {
+            width: 4rem;
+            height: 0rem;
+            background: white;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+        .container #navbar .nav-wrap.active {
+            height: 23rem;
+        }
+        .container #navbar .nav-wrap .nav-links {
+            text-decoration: none;
+            color: #a2a2b3;
+            font-weight: 800;
+            transition: all 0.3s ease;
+            font-size: 1.5rem;
+            padding: 0.6em;
+            line-height: 0.8;
+            text-align: center;
+            /* font-size: 1.5em; */
+        }
+        .container #navbar .nav-wrap .nav-links strong{
+            font-size: 0.75rem;
+        }
+        .container #navbar .nav-wrap .nav-links:hover, .container #navbar .nav-wrap .nav-links.active {
+            color: #8900FF;
+        }
+        .container .main-container {
+            width: 100%;
+            display: flex;
+            position: relative;
+        }
+        .container .main-container .profile {
+            color: #224;
+            width: 40%;
+            border-radius: 8px;
+            background: #FFF;
+            box-shadow: 0px 0px 20px #0005;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            justify-content: space-between;
+            /* justify-content: center; */
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        .container .main-container .profile .profile-image{
+            width: 100%;
+            height: 100em;
+            max-height: 50%;
+            /* background: red; */
+            background-image: url("https://cdn.hero.page/pfp/f6335fbf-f981-4977-819d-9acce79d748c-tokyo-ghoul's-kaneki-ken-ultra-hd-anime-pfp-1.png");
+            background-position: center center;
+            background-size: cover;
+            /* mask-image: url(); */
+            clip-path: polygon(100% 0, 100% 71%, 53% 100%, 0 71%, 0 0);
+        }
+        .container .main-container .profile .profile-data {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 0.2em;
+            /* margin-bottom: 1em; */
+            align-items: center;
+            justify-content: center;
+        }
+        .container .main-container .profile .profile-data .profile-name {
+            /* margin-top: 1em; */
+            font-weight: 600;
+            font-size: 2rem;
+        }
+        .container .main-container .profile .profile-data .profile-desc {
+            margin-bottom: 1em;
+            color: #8900FF;
+            font-size: 0.875rem;
+            height: 1.25rem;
+            font-weight: 600;
+            position: relative;
+        }
+        .container .main-container .profile .profile-data .profile-desc::after{
+            content: "";
+            position: absolute;
+            background: #8900FF;
+            width: 1px;
+            height: 80%;
+            top: 10%;
+            right: -0.2em;
+        }
+        .container .main-container .profile .profile-data .profile-socials {
+            display: flex;
+            gap: 1em;
+            font-size: 1.2rem;
+        }
+        .container .main-container .profile .profile-data .profile-socials a {
+            color: #224;
+            transition: all 0.3s ease;
+        }
+        .container .main-container .profile .profile-data .profile-socials a:hover {
+            color: #8900FF;
+        }
+        .container .main-container .profile .profile-buttons {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .container .main-container .profile .profile-buttons a {
+            color: #224;
+            text-decoration: none;
+            width: 50%;
+            font-weight: 600;
+            padding: 1em 2em;
+            border-top: 1px solid #a2a2b3A0;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .container .main-container .profile .profile-buttons a:nth-child(1) {
+            border-right: 1px solid #a2a2b3A0;
+        }
+        .container .main-container .profile .profile-buttons a:hover {
+            color: #8900FF;
+        }
+        .container .main-container .profile .profile-buttons a svg {
+            margin-left: 0.4em;
+        }
+        .container .main-container section {
+            opacity: 0;
+            color: #224;
+            width: calc(60% - 3em);
+            position: absolute;
+            height: -webkit-fill-available;
+            left: 20%;
+            top: 0;
+            border-radius: 0 8px 8px 0;
+            margin-top: 2rem;
+            margin-bottom: 2rem;
+            background: #FFF;
+            z-index: -1;
+            transition: all 0.5s ease;
+            padding: 1.5em;
+        }
+        .container .main-container section.active {
+            left: 40%;
+            opacity: 1;
+        }
+        .container .main-container section h1 {
+            margin: 0;
+            font-size: 1.7rem;
+        }
+        .container .main-container section h1::first-letter {
+            color: #8900FF;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar" id="navbar">
+            <div class="hamburger" onclick="toggleNavBar(this)">
+                <span class="hamburger-line-1"></span>
+                <span class="hamburger-line-2"></span>
+                <span class="hamburger-line-3"></span>
+            </div>
+            <div class="nav-wrap">
+                <a href="#" class="nav-links active" onclick="changeSection(this)">
+                    <i class="fa-solid fa-user"></i><br>
+                    <strong>About</strong>
+                </a>
+                <a href="#" class="nav-links" onclick="changeSection(this)">
+                    <i class="fa-solid fa-address-card"></i><br>
+                    <strong>Resume</strong>
+                </a>
+                <a href="#" class="nav-links" onclick="changeSection(this)">
+                    <i class="fa-solid fa-paintbrush"></i><br>
+                    <strong>Works</strong>                    
+                </a>
+                <a href="#" class="nav-links" onclick="changeSection(this)">
+                    <i class="fa-solid fa-message"></i><br>
+                    <strong>Blog</strong>
+                </a>
+                <a href="#" class="nav-links" onclick="changeSection(this)">
+                    <i class="fa-solid fa-at"></i><br>
+                    <strong>Contact</strong>
+                </a>
+            </div>
+        </nav>
+        <main class="main-container">
+            <div class="profile">
+                <div class="profile-image"></div>
+                <div class="profile-data">
+                    <div class="profile-name">ThunderBlaze</div>
+                    <div class="profile-desc">Web Designer</div>
+                    <div class="profile-socials">
+                        <a href="#">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-spotify"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="profile-buttons">
+                    <a href="#">DOWNLOAD CV<i class="fa-solid fa-download"></i></a>
+                    <a href="#">CONTACT ME<i class="fa-solid fa-location-arrow"></i></a>
+                </div>
+            </div>
+            <section class="about"></section>
+            <section class="resume"></section>
+            <section class="works active">
+                <h1 class="heading">Works</h1>
+            </section>
+            <section class="blog"></section>
+            <section class="contact"></section>
+        </main>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        let animText = document.querySelector(".container .main-container .profile .profile-data .profile-desc");
+        let navWrap = document.querySelector(".container #navbar .nav-wrap");
+        function toggleNavBar(x) {
+            x.classList.toggle("active");
+            navWrap.classList.toggle("active");
+        }
+        function changeSection(x) {
+            let a = x.innerText.toLowerCase();
+            for (let i = 0; i < 5; i++) {
+                document.getElementsByClassName("nav-links")[i].classList.remove("active");
+            }
+            x.classList.add("active");
+            for (let i = 0; i < 5; i++) {
+                document.getElementsByTagName("section")[i].classList.remove("active");
+            }
+            document.getElementsByClassName(a)[0].classList.add("active");
+        }
+        let i = 1;
+        var animTextData = ["Web-Designer","Developer"];
+        let word = animTextData[0];
+        // i = 1 ; 0th word gets cut
+        // i = 2 ; 1st word gets written
+        // i = 3 ; 1st word gets cut
+        // i = 4 ; 0th word gets written
+        let a = setInterval(function(){
+            if (i==(2*animTextData.length)){
+                i = 0;
+            }
+            if (i%2==0) {
+                word = animTextData[i/2];
+                if (animText.innerText.length == word.length){
+                    i++;
+                } else {
+                    animText.innerText = word.slice(0,(animText.innerText.length + 1));
+                }
+            } else if (i%2==1) {
+                word = animTextData[(i-1)/2];
+                if (animText.innerText == ''){
+                    i++;
+                } else {
+                    animText.innerText = animText.innerText.slice(0,(animText.innerText.length - 1));
+                }
+            }
+        },200)
+            // if (animText.innerText == '') {
+            //     if (i==2){
+            //         i=0;
+            //     }
+            //     animText.innerText = animTextData[i];
+            //     i++;
+            // } else {
+            //     animText.innerText = animText.innerText.slice(0,(animText.innerText.length - 1));
+            // }
+    </script>
+</body>
+</html>
