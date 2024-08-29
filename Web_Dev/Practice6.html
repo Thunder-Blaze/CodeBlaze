@@ -12,18 +12,19 @@
             margin: 0;
         }
         body{
-            height: 100vh;
+            /* height: 100vh; */
             width: 100%;
             background: #111116;
             display: flex;
+            padding: 1rem;
             align-items: center;
             justify-content: center;
             font-family: sans-serif;
         }
         .container{
             background: #202020;
-            width: 30vw;
-            height: 95vh;
+            width: max(30vw , 24rem);
+            height: 100%;
             border-radius: 20px;
             display: flex;
             flex-direction: column;
@@ -169,11 +170,27 @@
                 count=0;
                 opr="+";
             }
+            if (op=="-"){
+                result = result - Number.parseInt(input.value);
+                if (resultString = '') {
+                    resultString = resultString + input.value + "-";
+                } else {
+                    resultString = result + "-";
+                }
+                input.value = result;
+                inputResult.value = resultString;
+                count=0;
+                opr="-";
+            }
             // input.value='';
         }
         function resultx(){
             if (opr=="+") {
                 result = result + Number.parseInt(input.value);
+                input.value = result;
+            }
+            if (opr=="-") {
+                result = result - Number.parseInt(input.value);
                 input.value = result;
             }
         }

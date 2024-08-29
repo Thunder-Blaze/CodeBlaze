@@ -61,9 +61,28 @@
         #header .nav-links:nth-child(1) {
             background: linear-gradient(#444,#222);
             color: #DDD;
+            position: relative;
             & svg {
                 border-color: #DDD;
             }
+        }
+        #header .nav-links:nth-child(1)::after {
+            content: '';
+            display: flex;
+            background: none;
+            height: 0;
+            width: 0;
+            left: 100%;
+            top: 0;
+            border-left: 1rem solid #333;
+            /* border-image: linear-gradient(#3acfd5, #3a4ed5) 1; */
+            /* border-radius: 5px; this doesn't work
+            border-width: 4px;
+            border-style: solid;
+            padding: 5px; */
+            border-top: 3.1rem solid transparent;
+            border-bottom: 3.1rem solid transparent;
+            position: absolute;
         }
         #header .nav-links svg {
             border: 1px solid #222;
@@ -125,6 +144,38 @@
         #main-container .section-2 .services-grid .service-cont .service-title{
             color: #222;
             padding-bottom: 1rem;
+        }
+        #main-container .section-3 {
+            padding: 8rem 5rem;
+            background: #222;
+            color: #FFF;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        #main-container .section-3 .blog-block h1{
+            margin-bottom: 1rem;
+        }
+        #main-container .section-3 .blog-block .blog-content{
+            display: grid;
+            grid-template-columns: 7rem 1fr;
+            grid-template-rows: 1fr 2fr 1fr;
+            gap: 0.5rem 1rem;
+            margin-bottom: 1.5rem;
+        }
+        #main-container .section-3 .blog-block .blog-content .blog-img{
+            grid-row: span 3;
+            background: white;
+        }
+        #main-container .section-3 .blog-block .blog-content h3 i{
+            font-style: normal;
+            font-size: 0.5em;
+            color: lime;
+        }
+        #main-container .section-3 .blog-block .blog-content a{
+            color: lime;
+            text-decoration: none;
+            text-transform: uppercase;
         }
     </style>
 </head>
@@ -200,7 +251,24 @@
             </div>
         </section>
         <section class="section-3">
-
+            <div class="blog-block">
+                <h1>Blog</h1>
+                <div class="blog-content">
+                    <div class="blog-img" style="background-image: url();"></div>
+                    <h3 class="blog-title">LOREM IPSUM DOLOR <i>By lorem&nbsp;&nbsp;&nbsp;July 27 2016&nbsp;&nbsp;&nbsp;7 Comments</i></h3>
+                    <p class="blog-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aut minus consequuntur?</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="blog-content">
+                    <div class="blog-img" style="background-image: url();"></div>
+                    <h3 class="blog-title">LOREM IPSUM DOLOR <i>By lorem&nbsp;&nbsp;&nbsp;July 27 2016&nbsp;&nbsp;&nbsp;7 Comments</i></h3>
+                    <p class="blog-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa aut minus consequuntur?</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+            <div class="testimonials-block">
+                <h1>Testimonials</h1>
+            </div>
         </section>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js" integrity="sha512-6sSYJqDreZRZGkJ3b+YfdhB3MzmuP9R7X1QZ6g5aIXhRvR1Y/N/P47jmnkENm7YL3oqsmI6AK+V6AD99uWDnIw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
