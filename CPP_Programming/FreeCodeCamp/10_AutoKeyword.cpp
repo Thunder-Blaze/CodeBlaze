@@ -2,6 +2,7 @@
 using namespace std;
 
     // https://youtu.be/8jLOx1hD3_o?t=16689
+    // https://youtu.be/8jLOx1hD3_o?t=18871
 
 int main(){
     // Auto lets the compiler deduce the data type
@@ -15,5 +16,15 @@ int main(){
     auto var6 {123u};   // unsigned
     auto var7 {123ul};  // unsigned long 
     auto var8 {123ll};  // long long
+
+    // Assignment operators
+
+    var1 = 2;       // var1 = 2
+    var1 += 3;      // var1 = var1 + 3;
+    var1 -= 4;      // var1 = var1 - 4;
+    var1 *= 6;      // var1 = var1 * 6;
+    var1 /= 2;      // var1 = var1 / 2;
+    var1 %= 2;      // var1 = var1 % 2;
+    cout << var1 << endl;
     return 0;
 }

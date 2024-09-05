@@ -1,0 +1,144 @@
+* {
+    font-family: sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header{
+    display: grid;
+    grid-template-rows: 100px 1fr 44px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 8px;
+    height: 100%;
+    width: 200px;
+    background-color: #FFF;
+    border-right: 1px solid #2222;
+}
+header .logo {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/800px-Instagram_logo.svg.png?20160616034027");
+    background-position: center center;
+    background-size:contain;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 80%;
+}
+header .nav-wrap{
+    display: flex;
+    gap: 6px;
+    flex-direction: column;
+}
+header .nav-wrap .nav-links, header .hamburger-menu{
+    padding: 14px 16px;
+    text-decoration: none;
+    color: #222;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+header .nav-wrap .nav-links:hover, header .hamburger-menu:hover{
+    background: #DDD;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 100%;
+    margin: auto;
+    flex-direction: column;
+    /* background-color: #222; */
+    padding: 8px;
+    gap: 8px;
+}
+
+main section.statuses, main section.posts .post {
+    border: 1px solid #2222;
+    background: #FFF;
+    width: 100%;
+    border-radius: 8px;
+}
+
+main .statuses {
+    display: flex;
+    flex-direction: row;
+    height: 120px;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+main .statuses .status-grp {
+    height: 100px;
+    width: fit-content;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 60px 1fr;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    cursor: pointer;
+}
+main .statuses .status-img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+main .statuses .status-text {
+    color: #222;
+    font-size: 12px;
+    font-weight: 600;
+    width: 60px;
+    padding-top: 8px;
+}
+
+main .posts {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8px;
+}
+
+main .post .post-header {
+    display: grid;
+    grid-template-columns: 50px 1fr 50px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+main .post .post-header .user-img {
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    justify-self: center;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+main .post .post-header .user-name {
+    color: #222;
+    /* font-size: 12px; */
+    font-weight: 600;
+    /* width: 60px; */
+    padding-top: 8px;
+}
+main .post .post-header .more {
+    justify-self: center;
+}
+main .post .post-image {
+    height: 582px;
+    width: 582px;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
