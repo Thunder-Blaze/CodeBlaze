@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkedin</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+        *:not(h1) {
+            transition: all 0.3s ease;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-image: url("./assignment1.jpg");
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            font-family: Jost,sans-serif;
+            color: white;
+            line-height: 1.5;
+            letter-spacing: 0.05rem;
+            word-spacing: 0.1rem;
+            /* padding: 30px 0; */
+            height: 100vh;
+        }
+        main {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 0 50px;
+            flex-direction: column;
+        }
+        main form {
+            /* background: #ddd; */
+            color: black;
+            padding: 20px 0;
+            display: flex;
+            width: fit-content;
+            align-items: center;
+            border-radius: 6px;
+            flex-direction: column;
+        }
+        main form label {
+            font-size: 12px;
+            color: #444;
+        }
+        main form input {
+            font-family: Jost,sans-serif;
+            padding: 12px;
+            padding-top: 0;
+            /* outline-color: #0066FF; */
+            font-size: 18px;
+            border-radius: 6px;
+            /* border: none; */
+            margin-top: 4px;
+            border: none !important;
+            outline: none !important;
+            background: transparent;
+            color: #EEE;
+        }
+        main form button {
+            padding: 8px 40px;
+            color: #333;
+            border: none;
+            margin: auto;
+            display: block;
+            /* background: linear-gradient(#0066FF,#0141a0); */
+            /* border: 1px solid #0141a0; */
+            font-size: 16px;
+            border-radius: 50px;
+            background: #FFFD;
+            cursor: pointer;
+            font-family: Jost,sans-serif;
+            font-weight: 800;
+            letter-spacing: 1px;
+            position: relative;
+        }
+        main form button:after {
+            content: '';
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            inset: -5px;
+            border-radius: 500px;
+            color: #FFF;
+            /* height: 24px; */
+            /* width: 24px; */
+            position: absolute;
+            background:linear-gradient(30deg,#00B2FF,#8900FF);
+            z-index: -1;
+        }
+        main form button:hover{
+            color: #FFF;
+            background: transparent;
+        }
+        main form p {
+            color: #BBB;
+            font-size: 14px;
+        }
+        main form div {
+            color: #FFF;
+            font-weight: 500;
+        }
+        main form p a {
+            font-weight: bolder;
+            color: #FFF;
+            text-decoration: none;
+        }
+        main form p.signpara a {
+            font-weight: bolder;
+            color: lightskyblue;
+        }
+        main form fieldset {
+            border-radius: 10px;
+            border: 2px solid #FFF8;
+            width: fit-content;
+        }
+        main form fieldset:hover {
+            border-color: #FFF;
+        }
+        main legend {
+            color: #FFF8;
+            padding: 0 8px;
+            font-size: 16px;
+            margin-left: 12px;
+        }
+        main fieldset:hover legend {
+            color: #FFF;
+        }
+        .logo {
+            position: absolute;
+            bottom: 2rem;
+            right: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <img class="logo" src="https://freelogopng.com/images/all_img/1656997167linkedin-logo-white.png" alt="Linkedin Logo" width="200">
+        <h1>Make the most of your Professional Life</h1>
+        <form action="" class="signup">
+            <!-- <label for="ufname">First Name</label><br> -->
+            <fieldset>
+                <legend>First Name</legend>
+                <input type="text" name="ufname" size="50" required>
+            </fieldset>
+            <br>
+            <!-- <label for="ulname">Last Name</label><br> -->
+            <fieldset>
+                <legend>Last Name</legend>
+                <input type="text" name="ulname" size="50" required>
+            </fieldset>
+            <br>
+            <!-- <label for="uemail">Email</label><br> -->
+            <fieldset>
+                <legend>Email</legend>
+                <input type="email" name="uemail" size="50" required>
+            </fieldset>
+            <br>
+            <!-- <label for="upass">Password (6 or more characters)</label><br> -->
+            <fieldset>
+                <legend>Password <em>(6 or more characters)</em></legend>
+                <input type="password" name="upass" size="50" minlength="6" required>
+            </fieldset>
+            <!-- <input type="email" name="uemail" size="50" required> -->
+            <br><br>
+            <p align="center">You Agree to the Linkedin <a href="#">User Agreement</a>, <a href="#">Privacy Policy</a> and <a href="#">Cookie Policy</a></p>
+            <br>
+            <button type="submit">Agree & Join</button>
+            <br>
+            <p class="signpara" align="center">Already on Linkedin ? <a href="https://linkedin.com/in/thunderblaze" target="_blank">Sign in</a></p>
+            <br>
+            <div>Linkedin Corporation &copy; 2019</div>
+        </form>
+        <!-- <br> -->
+    </main>
+</body>
+</html>
