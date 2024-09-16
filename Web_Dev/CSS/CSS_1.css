@@ -1,0 +1,222 @@
+/* #ff3368 #ecfdff */
+
+/* 
+*    Selector
+*       |
+*       h1 {
+*           color: blue;
+*       }     |       |
+*          Property  Value
+*    
+*    And (Property + Value) is called Declaration
+
+*/
+
+/* ! Specificity of Inline CSS > Internal CSS > External CSS */
+
+h1 {
+    color: #ff3368;
+}
+
+/*
+    * Selectors
+        * Class Selectors
+            .class
+        * Id Selectors
+            #id
+        * 
+*/
+
+
+
+.para {
+    color: green;
+}
+
+#btn {
+    background: #ff3368;
+    color: #FFF;
+}
+
+/*
+? Pseudo Classes
+?   1. :hover
+*/
+
+/*
+? Pseudo Elements
+?   1. ::first-letter
+*/
+
+#btn:hover {
+    background: black;
+}
+
+h1:hover {
+    color: lightseagreen;
+}
+
+
+/* 
+! Color Schemes
+!   1. Name
+!   2. RGB
+!   3. RGBA
+!   4. HEX
+!   5. HSL
+!   6. HSLA
+*/
+
+#btn{
+    background: transparent;
+    background: currentColor;
+    background: #444;
+    color: aqua;
+    color: rgb(0,255,255);
+    color: rgba(0,255,255,0.5);
+    color: #00ffff;
+    color: #00ffffff;
+    color: hsla(180, 100%, 50%,0.5);
+    color: hsl(180, 100%, 50%);
+}
+
+/*
+? Color Properties
+* Transparent is a pre-defined color in CSS
+* Current Color takes the value of the color of parent
+* HUE   = Pure Color
+* TINT  = Pure Color with just White added
+* SHADE = Pure Color with just Black added
+* TONE  = Pure Color with just Grey added
+*/
+
+
+
+/*
+? Background Properties
+* background-color          - to add color
+* background-image          - to add img [using url(link)]
+* background-repeat         - to specify whether the image should appear more than one or not
+* background-position       - specify the position
+* background-size           - bg size [auto, cover, contain, percentages, or length values] 
+* background-attachment     - [scroll, fixed, local]
+* background-blend-mode     - [multiply, screen, overlay]
+*/
+
+
+/* 
+? Units in CSS
+* 1. Absolute Lengths
+*       > Pixels (px)
+*       > Inches (in)
+*       > Points (pt)
+* 2. Relative Lengths
+*       > em
+*       > Root em (rem)
+*       > Percentage (%)
+*       > Viewport height (vh)
+*       > Viewport width (vw)
+*/
+
+
+/* 
+? Font Properties
+* 1. Font Family    (Comma seperated values and written in quotes)
+* 2. Font Size
+* 3. Font Weight    [100-900]
+* 4. Font Style     [italic]
+* 5. Font Variant   [small-caps]
+
+* @font-face {
+*     font-family: "Name";
+*     src: url(./fonts/font.otf) format('opentype');
+* }
+
+? Font Formats
+*   * True Type Fonts (.ttf)                    format - 'truetype'
+*   * Open Type Fonts (.otf)                    format - 'opentype'
+*   * WOFF/WOFF2 Fonts (.woff/.woff2)           format - 'woff/woff2'
+*   * Embedded Open Type Fonts (.eot)           format - 'embedded-opentype'
+*   * Scalable Vector Graphic Fonts (.svg)      format - 'svg'
+*/
+
+
+
+/* 
+? Text Properties
+* Text Align            [left, right, center, justify]
+* Text Decoration       [underline, overline, line-through, none]
+* Text Transform        [uppercase, lowercase, capitalize]
+* Text Spacing
+*    1. Letter Spacing
+*    2. Word Spacing
+*    3. Line Height
+*    4. white-space         [nowrap]
+* Text Shadow           [offsetX - offsetY - blurRadius - color]
+*/
+
+
+
+/* 
+? Padding, Margin, Border in CSS
+* Border                [width - style - color]
+* Border Radius         [top-left top-right bottom-right bottom-left]
+* Padding               [top-left top-right bottom-right bottom-left]
+* Margin                [top-left top-right bottom-right bottom-left]
+*/
+
+
+
+/* 
+? Box Sizing in CSS
+* It specifies how the given width should be interpreted
+* Box Sizing            [border-box content-box]
+
+* If we set width with content box, it means the width of content should be equal to the specified width. But if we set width with border box, it means the width after including margin, border and padding should be equal to the specified width
+*/
+
+
+
+/* 
+? CSS Gradient
+* linear-gradient(to direction/angle, more than 2 color stops)
+* direction = [bottom right, top right, top left, bottom left ,right, left, bottom, top (default)]
+* angle     = [deg, rad]
+
+* repeating-linear-gradient(same as linear-gradient, size after which gradient should repeat)
+
+* radial gradient(shape, more than 2 color stops)
+* shape = [ellipse, circle]
+
+* we also have repeating-radial-gradient
+*/
+
+
+
+/* 
+? Box Shadow
+* [OffsetX - OffsetY - BlurRadius - Spread/Density - Color]
+
+? Drop Shadow
+* filter: drop-shadow(OffsetX - OffsetY - BlurRadius - Color)
+*/
+
+
+
+/* 
+? Filters in CSS
+* Grayscale()
+* Blur()
+* Opacity()
+* Contrast()
+* Brightness()
+* Invert()
+* Saturation()
+* Hue-rotate()
+* Sepia()
+*/
+
+/*
+? List Properties
+https://youtu.be/MSICFljRcb4?t=16515
+*/

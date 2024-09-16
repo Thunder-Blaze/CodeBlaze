@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to IIIT Lucknow</h1>
+    <div>
+        <p>This is IIIT Lucknow 2024 <span style="color: blue;">CS-IT</span> batch.</p>
+    </div>
+    <h1>HTML Tables</h1>
+    <table border="2" cellpadding="10">
+        <thead>
+            <tr>
+                <th colspan="2" >Student Info</th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <th>Name</th>
+                <th>Contacts</th>
+            </tr>
+            <tr>
+                <td rowspan="2">Yash</td>
+                <td>9534984898</td>
+            </tr>
+            <tr>
+                <td>9534984898</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Harshit</td>
+                <td>9534984898</td>
+            </tr>
+            <tr>
+                <td>9534984898</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <table border="2" cellpadding="10">
+        <thead>
+            <tr>
+                <th colspan="3" >Header</th>
+            </tr>
+        </thead>
+        <tbody align="center">
+            <tr>
+                <td>Col1</td>
+                <td>Col2</td>
+                <td>Col3</td>
+            </tr>
+            <tr>
+                <td colspan="2" rowspan="2">Col6</td>
+                <td>Col4</td>
+            </tr>
+            <tr>
+                <td>Col5</td>
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <h1>HTML Lists</h1>
+    <!-- square, disk, circle -->
+    <ul type="circle">
+        <li>Element 1</li>
+        <li>Element 2</li>
+    </ul>
+    <!-- I,i,A,a,1 -->
+    <ol type="A" start="3">
+        <li>Element 1</li>
+        <li>Element 2</li>
+    </ol>
+
+    <h1>HTML Link and Image</h1>
+    <a href="https://iiitl.ac.in">Website</a>
+    <br><br>
+    <img src="https://cdn.pixabay.com/photo/2022/12/01/04/35/sunset-7628294_640.jpg" alt="Anime Image" height="300" width="400">
+
+    <br><br>
+    <!-- HTML Forms -->
+    <form action="submit" method="post" name="myinfo" align="center">
+        <h1>HTML Forms</h1>
+        <input type="text" name="fname" id="fname" value="Damn" required>
+        &nbsp;
+        <input type="text" name="fname" id="fname" value="Ell" readonly  size="30">
+        <br><br>
+        <input type="text" name="fname" id="fname" value="Anime" disabled>
+        &nbsp;
+        <input type="password" name="fpass" id="fpass" placeholder="Type Password"  size="30"  maxlength="8">
+        <br><br>
+        <textarea name="ftext" id="ftext" rows="5" cols="46"></textarea>
+        <br><br>
+        <label for="pin">Pin : </label>
+        <input type="number" id="pin" name="pin" step="3">
+        <br><br>
+        <label for="vehicle">Vehicle : </label>
+        <select name="vehicle" id="vehicle"> 
+            <!-- multiple & size="2" -->
+            <option value="bike">Bike</option>
+            <option value="car">Car</option>
+            <option value="scooty">Scooty</option>
+        </select>
+        <br>
+        <label for="checkbox">Checkbox : </label>
+        <label for="op1">Op1</label>
+        <input type="checkbox" name="op1" id="op1">
+        <label for="op2">Op2</label>
+        <input type="checkbox" name="op2" id="op2">
+        <br>
+        <label for="radiobutton">RadioButton : </label>
+        <label for="rb1">Rb1</label>
+        <input type="radio" name="rb" id="rb1">
+        <label for="rb2">Rb2</label>
+        <input type="radio" name="rb" id="rb2">
+        <br><br>
+        <label for="subjects">Type your Subject</label>
+        <input list="subjects" value="DBMS">
+        <datalist id="subjects">
+            <option value="DBMS"></option>
+            <option value="SPS"></option>
+            <option value="WDA"></option>
+        </datalist>
+        <br><br>
+        <fieldset>
+            <legend>User Information</legend>
+            Username : <input type="text" name="username" id="username">
+            <br><br>
+            Password : <input type="text" name="password" id="password">
+        </fieldset>
+        <br><br>
+        Select Your Fav Color
+        <input type="color">
+        <br><br>
+        Date
+        <input type="date">
+        <br><br>
+        Time
+        <input type="time">
+        <br><br>
+        Month
+        <input type="month">
+        <br><br>
+        Week
+        <input type="week">
+        <br><br>
+        Input File
+        <input type="file">
+        <br><br>
+        <input type="image" src="https://fps.cdnpk.net/images/home/subhome-ai.webp?w=649&h=649" alt="Freepic Image">
+        <br><br>
+        <input type="url" name="" id="">
+        <br><br>
+        Quantity
+        <input type="number" min="1" max="100">
+        <input type="range" step="2" min="0" max="100">
+        <br><br>
+        <input type="search">
+        <br><br>
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

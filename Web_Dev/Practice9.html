@@ -177,6 +177,7 @@
             background-size: cover;
             position: relative;
             background-repeat: no-repeat;
+            cursor: pointer;
         }
         main .status .profiles .profile:not(:first-child)::before {
             content: '';
@@ -228,6 +229,9 @@
         main .feed .feed-grid .post .postact .actions{
             display: flex;
             gap: 10px;
+        }
+        main .feed .feed-grid .post .postact svg{
+            cursor: pointer;
         }
     </style>
 </head>
@@ -283,72 +287,78 @@
         <section class="feed">
             <h2>Feed</h2>
             <div class="feed-grid">
-                <div class="post">
-                    <img class="postimg" src="https://static.vecteezy.com/system/resources/thumbnails/033/662/051/small/cartoon-lofi-young-manga-style-girl-while-listening-to-music-in-the-rain-ai-generative-photo.jpg"></img>
-                    <div class="postact">
-                        <div class="actions">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-regular fa-comment"></i>
-                            <i class="fa-regular fa-paper-plane"></i>
-                        </div>
-                        <div class="book">
-                            <i class="fa-regular fa-bookmark"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="post">
-                    <img class="postimg" src="https://w0.peakpx.com/wallpaper/4/473/HD-wallpaper-anime-anime-girls-long-hair-blue-hair-blue-eyes-smiling-saraki.jpg"></img>
-                    <div class="postact">
-                        <div class="actions">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-regular fa-comment"></i>
-                            <i class="fa-regular fa-paper-plane"></i>
-                        </div>
-                        <div class="book">
-                            <i class="fa-regular fa-bookmark"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="post">
-                    <img class="postimg" src="https://c4.wallpaperflare.com/wallpaper/776/521/87/5-toubun-no-hanayome-anime-girls-short-hair-pink-hair-blue-eyes-hd-wallpaper-preview.jpg"></img>
-                    <div class="postact">
-                        <div class="actions">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-regular fa-comment"></i>
-                            <i class="fa-regular fa-paper-plane"></i>
-                        </div>
-                        <div class="book">
-                            <i class="fa-regular fa-bookmark"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="post">
-                    <img class="postimg" src="https://images.saymedia-content.com/.image/t_share/MTc2MjczMzQ2MDcyNjE4MTc0/15-badass-black-hair-anime-girls.jpg"></img>
-                    <div class="postact">
-                        <div class="actions">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-regular fa-comment"></i>
-                            <i class="fa-regular fa-paper-plane"></i>
-                        </div>
-                        <div class="book">
-                            <i class="fa-regular fa-bookmark"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="post">
-                    <img class="postimg" src="https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-anime-girl-standing-in-front-of-a-big-clock-image_2973927.jpg"></img>
-                    <div class="postact">
-                        <div class="actions">
-                            <i class="fa-regular fa-heart"></i>
-                            <i class="fa-regular fa-comment"></i>
-                            <i class="fa-regular fa-paper-plane"></i>
-                        </div>
-                        <div class="book">
-                            <i class="fa-regular fa-bookmark"></i>
-                        </div>
-                    </div>
-                </div>
+                <div class="post-containers">
 
+                    <div class="post">
+                        <img class="postimg" src="https://static.vecteezy.com/system/resources/thumbnails/033/662/051/small/cartoon-lofi-young-manga-style-girl-while-listening-to-music-in-the-rain-ai-generative-photo.jpg"></img>
+                        <div class="postact">
+                            <div class="actions">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <div class="book">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img class="postimg" src="https://images.saymedia-content.com/.image/t_share/MTc2MjczMzQ2MDcyNjE4MTc0/15-badass-black-hair-anime-girls.jpg"></img>
+                        <div class="postact">
+                            <div class="actions">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <div class="book">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-containers">
+                    <div class="post">
+                        <img class="postimg" src="https://w0.peakpx.com/wallpaper/4/473/HD-wallpaper-anime-anime-girls-long-hair-blue-hair-blue-eyes-smiling-saraki.jpg"></img>
+                        <div class="postact">
+                            <div class="actions">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <div class="book">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-containers">
+                    <div class="post">
+                        <img class="postimg" src="https://png.pngtree.com/thumb_back/fh260/background/20230617/pngtree-anime-girl-standing-in-front-of-a-big-clock-image_2973927.jpg"></img>
+                        <div class="postact">
+                            <div class="actions">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <div class="book">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post">
+                        <img class="postimg" src="https://c4.wallpaperflare.com/wallpaper/776/521/87/5-toubun-no-hanayome-anime-girls-short-hair-pink-hair-blue-eyes-hd-wallpaper-preview.jpg"></img>
+                        <div class="postact">
+                            <div class="actions">
+                                <i class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-regular fa-paper-plane"></i>
+                            </div>
+                            <div class="book">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>

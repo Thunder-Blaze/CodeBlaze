@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linkedin</title>
+    <style>
+        body {
+            background: #0066FF;
+            font-family: sans-serif;
+            color: white;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        main {
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        main h1 {
+            font-weight: normal;
+        }
+        main form {
+            background: #ddd;
+            color: black;
+            padding: 20px 40px;
+            border-radius: 6px;
+        }
+        main form label {
+            font-size: 12px;
+            color: #444;
+        }
+        main form input {
+            padding: 8px;
+            outline-color: #0066FF;
+            font-size: 16px;
+            border-radius: 6px;
+            border: none;
+            margin-top: 4px;
+            border: 1px solid #aaa;
+        }
+        main form input[type=submit] {
+            padding: 8px 60px;
+            color: white;
+            border: none;
+            margin: auto;
+            display: block;
+            background: linear-gradient(#0066FF,#0141a0);
+            border: 1px solid #0141a0;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        main form p {
+            color: #444;
+            font-size: 14px;
+        }
+        main form p a {
+            font-weight: bolder;
+            color: #000;
+            text-decoration: none;
+        }
+        main form p.signpara a {
+            font-weight: normal;
+            color: #0066FF;
+        }
+    </style>
+</head>
+<body>
+    <main class="container">
+        <img src="https://freelogopng.com/images/all_img/1656997167linkedin-logo-white.png" alt="Linkedin Logo" width="170">
+        <h1>Make the most of your Professional Life</h1>
+        <form action="" class="signup">
+            <label for="ufname">First Name</label><br>
+            <input type="text" placeholder="Type your First Name" size="50" required>
+            <br><br>
+            <label for="ulname">Last Name</label><br>
+            <input type="text" placeholder="Type your Last Name" size="50" required>
+            <br><br>
+            <label for="uemail">Email</label><br>
+            <input type="email" placeholder="Type your Email" size="50" required>
+            <br><br>
+            <label for="upass">Password (6 or more characters)</label><br>
+            <input type="password" placeholder="Type your Password" size="50" minlength="6" required>
+            <br>
+            <p align="center">You Agree to the Linkedin <a href="#">User Agreement</a>, <a href="#">Privacy Policy</a> and <br><a href="#">Cookie Policy</a></p>
+            <input type="submit" value="Agree & Join">
+            <p class="signpara" align="center">Already on Linkedin ? <a href="https://linkedin.com/in/thunderblaze" target="_blank">Sign in</a></p>
+        </form><br>
+        Linkedin Corporation &copy; 2019
+    </main>
+</body>
+</html>
