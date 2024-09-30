@@ -162,4 +162,12 @@
     "editor.hideCursorInOverviewRuler": true,
     "editor.overviewRulerBorder": false,
     // "editor.stickyScroll.enabled": false,
+
+    "dart.flutterSdkPath": "C:\\Users\\darkt\\dev\\flutter",
+    "[dart]": {
+        "editor.tabSize": 4,
+        "editor.insertSpaces": true,
+        "editor.detectIndentation": false,
+        "editor.suggest.insertMode": "replace"
+    }
 }
