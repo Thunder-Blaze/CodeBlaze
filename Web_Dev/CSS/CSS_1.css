@@ -20,11 +20,19 @@ h1 {
 
 /*
     * Selectors
+        * Universal Selector
+            *
         * Class Selectors
             .class
         * Id Selectors
             #id
-        * 
+        * Tag Selectors
+            tag
+*/
+
+
+/* 
+? We can use aspect-ratio when we have to change height and width accordingly
 */
 
 
@@ -41,11 +49,21 @@ h1 {
 /*
 ? Pseudo Classes
 ?   1. :hover
+?   2. :first-child
+?   3. :last-child
+?   4. :nth-child(n)
+?   5. :first-of-type
+?   6. :last-of-type
 */
 
 /*
 ? Pseudo Elements
-?   1. ::first-letter
+?   1. ::before
+?   2. ::after
+?   3. ::first-letter
+?   4. ::first-line
+?   5. ::selection
+?   6. ::placeholder
 */
 
 #btn:hover {
@@ -220,6 +238,108 @@ h1:hover {
 
 /*
 ? List Properties
-https://youtu.be/MSICFljRcb4?t=16515
-https://youtu.be/5ccq_nLHneE?t=18861
+* list-style-type
+* list-style-image
+* list-style-position
+* list-style-property
+*/
+
+
+
+/* 
+? Anchor States in CSS
+* a:link
+* a:hover
+* a:visited
+* a:focus
+* a:visited
+*/
+
+
+/* 
+!! Combinators in CSS
+* Decendent  Selector (Space)
+* Child Selector (>)
+* Adjacent Sibling Selector (+)
+* General Sibling Selector (~)
+* Universal Selector (*)
+*/
+
+
+/* 
+? Displays in CSS
+* Block
+* Inline
+* Inline-Block
+* None
+*/
+
+
+
+/* 
+? Positions in CSS
+* Static
+* Relative
+* Absolute
+* Fixed
+* Sticky
+*/
+
+
+/* 
+? Overflow in CSS
+* visible
+* auto
+* scroll
+* hidden
+*/
+
+
+/* 
+? Z-Index in CSS
+* It specifies the stacking order in elements
+* Like which element should be above and which should be below
+https://youtu.be/MSICFljRcb4?t=21611
+*/
+
+
+/* 
+! Column Layout in CSS   (NEW) [Newspaper Style (add text-align:justify)]
+* column-count
+* column-gap
+* column-rule               [same values as border]
+* column-fill
+*/
+
+
+
+/* 
+! Flexbox in CSS   (NEW)
+
+? Flexbox Container or Parent Properties
+* display: flex;
+* flex-direction        [row (default), column, row-reverse, column-reverse]
+It sets the main-axis as row or column, the other one becomes cross-axis
+* justify-content       [center, flex-end, flex-start, space-between, space-around, space-evenly]
+* align-items           [center, flex-end, flex-start,strech, baseline]
+* flex-wrap             [nowrap (default), wrap, wrap-reverse]
+* align-content         [Same as justify content but this only works when flex-wrap is not set to nowrap]
+
+? Flexbox Item or Child Properties
+* flex-grow             [if there is extra space, then elements with flex grow more than 1 will increase in dimensions faster]
+* flex-shrink           [if there is less space, then elements with flex shrink more than 1 will decrease in dimensions faster]
+*/
+
+
+
+/* 
+! Grid Layout in CSS    (NEW)
+ 
+*/
+
+
+
+/* 
+? Transitions in CSS
+https://youtu.be/MSICFljRcb4?t=29344
 */
