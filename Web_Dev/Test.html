@@ -62,6 +62,59 @@
                 transform: rotate(360deg);
             }
         }
+
+
+        .element{
+            height: 0;
+            width: 0;
+            border-left: 50px solid #000;
+            border-right: 50px solid #000;
+            border-bottom: 100px solid #000;
+            animation: anime 5s linear infinite;
+            position: relative;
+        }
+        @keyframes anime{
+            0% {
+                border-left: 50px solid #000;
+                border-right: 50px solid #000;
+                border-bottom: 100px solid #000;
+                border-radius: 0;
+                left: 0;
+                top: 0;
+            }
+            25% {
+                border-left: 50px solid #0000;
+                border-right: 50px solid #0000;
+                border-radius: 0;
+                left: 500px;
+                top: 0;
+            }
+            50% {
+                border-left: 50px solid #000;
+                border-right: 50px solid #000;
+                /* border-radius: 50%; */
+                border-radius: 0;
+                left: 500px;
+                top: 500px;
+            }
+            75% {
+                /* border-left: 80px solid #000;
+                border-right: 80px solid #000; */
+                border-left: 50px solid #000;
+                border-right: 50px solid #000;
+                /* border-radius: 0; */
+                border-radius: 50%;
+                left: 0;
+                top: 500px;
+            }
+            100% {
+                border-left: 50px solid #000;
+                border-right: 50px solid #000;
+                border-radius: 0;
+                left: 0;
+                top: 0;
+            }
+        }
     </style>
 </head>
 <body>
@@ -222,6 +275,21 @@
     </form>
     <br><br>
     <div class="triangle"></div>
+    <br>
+    <div class="triangle" style="border-left: 60px solid #0000;
+    border-right: 60px solid #0000;
+    border-top: 100px solid #000;
+    border-bottom: none;"></div>
+    <br>
+    <div class="triangle" style="border-bottom: 60px solid #0000;
+    border-top: 60px solid #0000;
+    border-left: 100px solid #000;
+    border-right: none;"></div>
+    <br>
+    <div class="triangle" style="border-top: 60px solid #0000;
+    border-bottom: 60px solid #0000;
+    border-right: 100px solid #000;
+    border-left: none;"></div>
     <br><br>
     <div class="sun-earth">
         <div class="sun">
@@ -229,6 +297,10 @@
         </div>
     </div>
     <p class="count" style="color: black; font-size: 4rem; text-align: center; margin: 0;">Count : <span id="count">0</span></p>
+    <br><br><br>
+    <div style="height: 600px; width: 600px;background-color: lawngreen;">
+        <div class="element"></div>
+    </div>
     <script>
         const a = document.getElementById('count');
         setInterval(function(){

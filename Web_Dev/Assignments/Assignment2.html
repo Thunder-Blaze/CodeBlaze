@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #009FFF;
+            background: -webkit-linear-gradient(to right, #ec2F4B, #009FFF);
+            background: linear-gradient(to right, #ec2F4B, #009FFF);
+            width: 100%;
+            min-height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        body .container {
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            position: relative;
+        }
+        body .container .element {
+            width: 2px;
+            height: 100%;
+            left: calc(50% - 1px);
+            position: relative;
+            animation: rotate 10s linear infinite;
+        }
+        body .container .element .shape {
+            position: absolute;
+            top: 0;
+            height: 0px;
+            width: 100px;
+            border-left: 0px solid #FFF0;
+            border-right: 0px solid #FFF0;
+            border-bottom: 100px solid #FFF;
+            animation: rotate 10s linear infinite reverse, anime 10s linear infinite;
+        }
+        body .container .info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #FFF;
+            font-family: sans-serif;
+            animation-name: text;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            opacity: 0;
+        }
+        .info1 {
+            opacity: 1;
+        }
+        .info2 {
+            animation-delay: 2.5s;
+            opacity: 0;
+        }
+        .info3 {
+            animation-delay: 5s;
+            opacity: 0;
+        }
+        .info4 {
+            animation-delay: 7.5s;
+            opacity: 0;
+        }
+        @keyframes rotate {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(360deg);}
+        }
+        @keyframes anime{
+            0%, 100% {
+                width: 100px;
+                border-left: 0px solid #FFF0;
+                border-right: 0px solid #FFF0;
+                border-bottom: 100px solid rgb(156, 103, 255);
+                border-radius: 0;
+                background: transparent;
+            }
+            25% {
+                width: 0;
+                border-left: 50px solid #FFF0;
+                border-right: 50px solid #FFF0;
+                border-bottom: 100px solid rgb(103, 202, 255);
+                border-radius: 0;
+                background: transparent;
+            }
+            50% {
+                width: 100px;
+                border-left: 0px solid #FFF0;
+                border-right: 0px solid #FFF0;
+                /* background: rgb(174, 103, 255); */
+                border-bottom: 100px solid rgb(103, 255, 111);
+                border-radius: 0;
+            }
+            75% {
+                width: 0;
+                width: 100px;
+                border-left: 0px solid #FFF0;
+                border-right: 0px solid #FFF0;
+                border-bottom: 100px solid rgb(255, 227, 103);
+                /* border-left: 50px solid #FFF;
+                border-right: 50px solid #FFF; */
+                border-radius: 50%;
+                /* width: 100px;
+                border-left: 20px solid #FFF;
+                border-right: 20px solid #FFF;
+                border-radius: 0; */
+            }
+        }
+        @keyframes text {
+            0%, 25% {
+                opacity: 1;
+            }
+            25%, 50%, 75%, 100% {
+                opacity: 0;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="element">
+            <div class="shape"></div>
+        </div>
+        <div class="info info1">I am <span id="shape">Square (Purple)</span>. I'm at Position (<span id="coordinates">0,0</span>)</div>
+        <div class="info info2">I am <span id="shape">Triangle (Blue)</span>. I'm at Position (<span id="coordinates">100,-100</span>)</div>
+        <div class="info info3">I am <span id="shape">Square (Green)</span>. I'm at Position (<span id="coordinates">0,-200</span>)</div>
+        <div class="info info4">I am <span id="shape">Circle (Yellow)</span>. I'm at Position (<span id="coordinates">-100,-100</span>)</div>
+    </div>
+</body>
+</html>
