@@ -341,5 +341,130 @@ It sets the main-axis as row or column, the other one becomes cross-axis
 
 /* 
 ? Transitions in CSS
-https://youtu.be/MSICFljRcb4?t=29344
+* transition-property
+* transition-duration
+* transition-timing-function    [ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier()]
+* transition-delay
+*/
+
+
+/* 
+? Transform in CSS
+* rotate
+* skew
+* scale
+* translate
+* perspective  (To create a 3d space)
+
+* transform-origin
+*/
+
+
+
+
+/* 
+? Animations in CSS
+* animation-name
+* animation-duration
+* animation-timing-function    [ease, ease-in, ease-out, ease-in-out, linear, cubic-bezier()]
+* animation-delay
+* animation-direction
+* animation-iteration-count
+* animation-fill-mode
+*/
+
+
+
+
+/* 
+? CSS Variables
+* --variable-name: value;
+TODO property: var(--variable-name);
+*/
+
+
+/* 
+! Specificity in CSS
+* !important
+* Inline Style
+* Id
+* Class or Pseudo-class or Data-Attribute
+* Element or Psudo-element
+* * (universal selector) [has 0 specificity]
+?                         Inline   Class
+?                            |       |
+TODO -> Represented as ( _ , _ , _ , _ , _ )
+?                        |       |       |
+?                  !important    Id      Tag
+*/
+
+
+
+/* 
+? New CSS Features
+! Selectors
+* :is() / :matches()
+* :has()
+* :where() [same as is but with 0 specificity]
+* :not()
+
+* Media Query Range Syntax
+
+* Container Queries
+
+* Accent Color
+
+* Aspect-Ratio
+? aspect-ratio : 1; (square)
+? aspect-ratio : calc(16 / 9); (16:9)
+
+* Scroll-Snap
+
+
+* Individual Transform Properties
+? scale
+? perspective
+? translate
+? rotate
+? skew
+
+* CSS Nesting
+? Allows to write CSS for child element inside the CSS selector of parent element
+
+* Gap Property for Flexbox
+? gap
+
+* CSS Logical Properties (inline and block)
+? border-inline (shorthand for border-left and border-right)
+? border-block  (shorthand for border-top and border-bottom)
+
+* CSS Writing Mode
+? To write text in different different ways live vertically, etc
+
+* focus-visible
+* floats (not much uselful)
+
+* Clip-path
+? ******************************************************************
+*/
+
+
+
+/*
+!####################################################################
+!############################# PART - 2 #############################
+!####################################################################
+*/
+
+
+
+
+
+/* 
+? https://www.youtube.com/playlist?list=PLEYW3pZS6IQ_a-iYAno4VsZonrikphq8L
+https://www.youtube.com/watch?v=iJHASLCXA-w&list=RDPadwEAB3Zgs&index=5
+? https://youtu.be/xAsWteYn1no&t=4013
+? https://youtu.be/k51W7bz7LQU?list=PLwGdqUZWnOp1Rab71vx2zMF6qpwGDB2Z1&t=10  
+
+https://www.youtube.com/watch?v=4EDbe3lhHOM&list=PLauivoElc3ggagradg8MfOZreCMmXMmJ-&index=31
 */

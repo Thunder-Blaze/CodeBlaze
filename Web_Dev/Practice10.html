@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Animation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            width: 100%;
+            min-height: 100vh;
+            font-family: "JetBrains Mono", sans-serif;
+            display: grid;
+            place-items: center;
+            background: #121223;
+            color: #EEF;
+            font-size: 10rem;
+            font-weight: 900;
+        }
+        div {
+            position: relative;
+        }
+        div::after {
+            content: "Subscribe";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: auto;
+            width: 50%;
+            overflow: hidden;
+            z-index: 1;
+            color: yellowgreen;
+            animation: text 0.8s linear infinite alternate;
+            border-right: 4px solid yellowgreen;
+        }
+        @keyframes text {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>Subscribe</div>
+</body>
+</html>

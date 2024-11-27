@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <table id="tb" border="1">
+        <thead>
+            <tr>
+                <th>Sno</th>
+                <th>Name</th>
+                <th>City</th>
+                <th><input type="button" value=" + " onclick="addRow()"></th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        tab = document.getElementById("tb");
+        function addRow(){
+            tableLength = tab.rows.length;
+            x = tab.insertRow();
+
+            sno = document.createElement("input");
+            sno.setAttribute("type","text");
+            sno.setAttribute("value",tableLength);
+            sno.setAttribute("disabled","true");
+            y = x.insertCell()
+            y.appendChild(sno);
+
+            nam = document.createElement("input");
+            nam.setAttribute("type","text");
+            y = x.insertCell()
+            y.appendChild(nam);
+
+            city = document.createElement("input");
+            city.setAttribute("type","text");
+            y = x.insertCell()
+            y.appendChild(city);
+
+            rmb = document.createElement("input");
+            rmb.setAttribute("type","button");
+            rmb.setAttribute("value"," - ");
+            rmb.setAttribute("onclick","removeRow()");
+            y = x.insertCell()
+            y.appendChild(rmb);
+        }
+        function removeRow(){
+            td = event.target.parentElement
+            tr = td.parentElement
+            tr.parentElement.removeChild(tr)
+        }
+    </script>
+</body>
+</html>
