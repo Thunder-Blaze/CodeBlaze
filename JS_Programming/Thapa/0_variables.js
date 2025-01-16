@@ -84,7 +84,7 @@ console.log(somearr.filter((ele)=>{
     return ele>"a";
 }))
 
-//TODO write a function to return an array containing only the products having the price less than equal to 500
+//TODO write a function to return an array containing only the products having the price less than equal to 500 
 const products = [
     { name: "Laptop", price: 1200 },
     { name: "Phone", price: 800 },
@@ -128,7 +128,7 @@ console.log(names.map((elem)=>{
     //     //Code to be written
     // },initialValue)
 const prices = [11,223,343,434,23,564,64,99]
-total_cost = prices.reduce((accum,currElem)=>{
+total_cost = prices.reduce((accum,currElem)=> {
     return accum + currElem;
 }, 0)
 console.log(total_cost)
@@ -238,9 +238,49 @@ console.log(Math.floor(Math.random())*100+1)
 
 // = So, while the DOM is focused on the content of the webpage, the BOM is focused on the browser enviornment. The window object serves serves as the global object that encompasses both the DOM when working in a browser enviornment
 
+// ! DOM (Document Object Model)
+//  ? The DOM is a tree like representation of the HTML Document.
+// - It provides a way to interact with the html document using Javascript.
+// - The DOM provides multiple properties and methords to dynamically change the content of the HTML Document using JS
+
+// * DOM Properties
+// - document
+// - getElementById(id)
+// - getElementsByClassName(className)
+// - getElementsByTagName(tagName)
+// - querySelector(selector)
+// - querySelectorAll(selector)
+// - outerHTML
+// - innerHTML
+// - innerText
+// - textContent
+// - style
 
 
-// https://youtu.be/13gLB6hDHR8?t=38156
+// * DOM Methords
+// - createChild(tagName)
+// - appendChild(node)
+// - removeChild(node)
+// - addEventListener(event, function)
+// - removeEventListener(event, function)
+// - setAttribute(name, value)
+// - getAttribute(name)
+// - parentNode / parentElement
+// - childNodes / children
+// - firstChild / firstElementChild
+// - lastChild / lastElementChild
+// - nextSibling / nextElementSibling
+// - previousSibling / previousElementSibling
+// - closest(selector)
+// - forEach(Array.from)
+
+
+// * Window Methords
+// window.open("https://anime.us","_blank")
+
+
+
+// https://youtu.be/13gLB6hDHR8?list=PLwGdqUZWnOp3F_J159kfx22z7VmJ7LfU8&t=40463
 
 
 //> Comment Markdown

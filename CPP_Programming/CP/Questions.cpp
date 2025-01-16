@@ -51,12 +51,23 @@ int32_t countChars(string s, char c){
 }
 
 void killemall(){
-    // int a, b, xk, yk, xq, yq;
-    // cin >> a >> b >> xk >> yk >> xq >> yq ;
-    int n, x;
-    cin >> n >> x;
-    vector<int> a(n);
-    invec(a);
+    int n;
+    cin >> n;
+    vector<int> arr(n-2);
+    vector<int> arrres(n-2);
+    int a1, a2;
+    int ares1, ares2;
+    cin >> a1 >> a2;
+    for(int i = 0; i < n-2; i++) cin >> arr[i];
+    cin >> ares1;
+    for(int i = 0; i < n-2; i++) cin >> arrres[i];
+    cin >> ares2;
+    if ((a1 == ares1 && a2 == ares2) || (a1 == ares2 && a2 == ares1)){
+        sort(arr.begin(), arr.end());
+        sort(arrres.begin(), arrres.end());
+        if (arr == arrres) cout << "YES\n";
+        else cout << "NO\n";
+    } else cout << "NO\n";
 }
 
 int32_t main(){

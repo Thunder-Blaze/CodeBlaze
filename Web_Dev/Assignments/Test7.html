@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Footer</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            margin: 0;
+            min-height: 100vh;
+        }
+        footer {
+            height: 50px;
+            background: #000;
+            width: 100%;
+            color: white;
+        }
+        main {
+            min-height: calc(100vh - 50px);
+        }
+    </style>
+</head>
+<body>
+    <main id="content">
+        <button onclick="AddPara()">Add Paragraph</button>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos beatae ratione molestias at voluptates ipsam nobis, exercitationem libero in sapiente sed recusandae vel voluptas, commodi impedit maxime debitis velit tempore error totam modi iste, praesentium porro. Commodi laudantium, quos quibusdam, similique vero, veniam dicta laborum vitae eius voluptatum accusamus ad.</p>
+    </main>
+    <footer>This is footer</footer>
+    <script>
+        c = document.getElementById('content');
+        function AddPara(){
+            x = document.createElement("p");
+            x.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos beatae ratione molestias at voluptates ipsam nobis, exercitationem libero in sapiente sed recusandae vel voluptas, commodi impedit maxime debitis velit tempore error totam modi iste, praesentium porro. Commodi laudantium, quos quibusdam, similique vero, veniam dicta laborum vitae eius voluptatum accusamus ad."
+            c.appendChild(x);
+        }
+    </script>
+</body>
+</html>

@@ -31,4 +31,4 @@ x = new car ("Mercedes", 2019);
 w1 = new Wheel(x, "f1");
 
 console.log(x.age())
-console.log(w1.wheel + " " + w1.type)
+console.log(w1.wheel + " " + w1.type + " " + w1.name)
