@@ -2,6 +2,7 @@
   "name": "node_practice",
   "version": "1.0.0",
   "description": "A Program to Practice Node",
+  "type": "module",
   "main": "app.js",
   "dependencies": {
     "bun-types": "^1.1.44",
