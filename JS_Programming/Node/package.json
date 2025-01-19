@@ -1,0 +1,21 @@
+{
+  "name": "node_practice",
+  "version": "1.0.0",
+  "description": "A Program to Practice Node",
+  "main": "app.js",
+  "dependencies": {
+    "bun-types": "^1.1.44",
+    "typescript": "^5.7.3",
+    "undici-types": "^5.26.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
+  "scripts": {
+    "http": "nodemon http_module.js",
+    "httpw": "bun --watch http_module.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "thunderblaze",
+  "license": "ISC"
+}
