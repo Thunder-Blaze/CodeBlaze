@@ -18,7 +18,7 @@
 
 // > npx npm-check-updates (Also Updates Package.json)
 
-// <| Global Packages |>   
+// <| Global Packages |>  
 // > npm install -g <pkg_name>
 // > npm outdated -g
 // > npm update -g <pkg_name>
