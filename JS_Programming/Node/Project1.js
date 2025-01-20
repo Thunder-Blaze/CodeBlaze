@@ -34,6 +34,7 @@ const handleInput = (option) => {
         rl.close()
         // process.exit(0);
     } else {
+        console.log("Invalid Option. Please try again.")
         showMenu();
     }
 }
