@@ -17,3 +17,15 @@
 // > npm list <pkg_name>
 
 // > npx npm-check-updates (Also Updates Package.json)
+
+// <| Global Packages |>   
+// > npm install -g <pkg_name>
+// > npm outdated -g
+// > npm update -g <pkg_name>
+// > npm remove -g <pkg_name>
+
+// <| NPM DevDependencies |> 
+// These dependencies are only required during the development
+// > npm install -D <pkg_name>
+// When we use the below command dev dependencies are not installed 
+// > npm install --production
