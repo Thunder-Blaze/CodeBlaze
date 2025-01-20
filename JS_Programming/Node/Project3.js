@@ -17,6 +17,9 @@ const getJoke = async () => {
             console.log(chalk.red(`${joke.setup}`))
             console.log(chalk.blue.bgRed.bold(`${joke.punchline}`))
         })
+        response.on('error', (err) => {
+            console.log(`Error Fetching Quotes: ${err.message}`);
+        })
     })
 }
 
