@@ -14,7 +14,7 @@ const rl = readline.createInterface({
 
 const writeFile = (filename, value) => {
     fs.promises.writeFile(path.join(__dirname, filename), value, "utf-8")
-    .then(console.log("File Created Successfully"))
+    .then(console.log(`File ${filename} Created Successfully`))
     .catch((err)=>(console.log("Error Creating File: ", err)))
     .finally(rl.close())
 }
